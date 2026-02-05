@@ -1,0 +1,28 @@
+[project]
+name = "multipixel_camera_analysis"
+description = "Analysis code for CMOS camera data for the Gratta gravity experiment."
+dynamic = ["version"]
+requires-python = ">=3.7"
+authors = [ { name = "Kenneth Kohn", email = "kmkohn@stanford.edu" } ]
+dependencies = [
+	"numpy",
+	"scipy",
+	"matplotlib",
+	"h5py",
+	"dill",
+	"joblib",
+    "tqdm",
+]
+
+[project.urls]
+Homepage = "https://github.com/kmk-25/Multipixel_Camera_Analysis"
+
+[build-system]
+requires = ["setuptools >= 61.0.0","setuptools-git-versioning"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools-git-versioning]
+enabled = true
